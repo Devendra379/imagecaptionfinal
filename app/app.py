@@ -2,14 +2,13 @@
 import streamlit as st
 import numpy as np
 import pickle
-import tensorflow as tf
+import tensorflow as TF
 # from tensorflow import keras
-from tensorflow.keras.models import Model
-from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from PIL import Image
+from keras.models import Model
+from keras.applications.vgg16 import VGG16, preprocess_input
+from keras.preprocessing.image import load_img, img_to_array
+from keras.models import load_model
+from keras.preprocessing.sequence import pad_sequences
 from PIL import Image
 import requests
 from io import BytesIO
@@ -163,4 +162,5 @@ def main():
                 st.markdown(f"<p style='font-size:25px'><i>{generated_caption}</i>.</p>",
                             unsafe_allow_html=True)
 
-main()
+if __name__ == "__main__":
+    main()
